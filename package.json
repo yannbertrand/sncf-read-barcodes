@@ -12,8 +12,6 @@
   },
   "dependencies": {
     "@zxing/browser": "^0.1.1",
-    "pako": "^2.0.4",
-    "pdf-lib": "^1.17.1",
-    "pngjs": "^6.0.0"
+    "pdfjs-dist": "^2.16.105"
   }
 }

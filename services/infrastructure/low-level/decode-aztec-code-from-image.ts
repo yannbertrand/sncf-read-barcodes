@@ -1,12 +1,9 @@
 import { BrowserAztecCodeReader } from '@zxing/browser';
-import { createImageElement } from './image-utils';
 const codeReader = new BrowserAztecCodeReader();
 
-export async function decodeAztecCodeFromImage(imageBuffer: ArrayBuffer) {
+export async function decodeAztecCodeFromImage(imageElement: HTMLImageElement) {
   try {
-    return await codeReader.decodeFromImageElement(
-      createImageElement(imageBuffer)
-    );
+    return await codeReader.decodeFromImageElement(imageElement);
   } catch (error) {
     throw new Error('Error while decoding', { cause: error });
   }

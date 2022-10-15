@@ -11,6 +11,7 @@ export async function findTicketsInfoFromFile(
       return await findTicketsInfoInPdf(data);
     case 'image/png':
     default:
-      return [await findTicketInfoInImage(data)];
+      const foundTicket = await findTicketInfoInImage(data);
+      return foundTicket ? [foundTicket] : [];
   }
 }
