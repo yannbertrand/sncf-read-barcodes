@@ -11,7 +11,7 @@
     "nuxt": "3.0.0-rc.11"
   },
   "dependencies": {
-    "@zxing/browser": "^0.1.1",
-    "pdfjs-dist": "^2.16.105"
+    "@zxing/browser": "0.1.1",
+    "pdfjs-dist": "2.16.105"
   }
 }
