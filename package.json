@@ -12,6 +12,6 @@
   },
   "dependencies": {
     "@zxing/browser": "0.1.5",
-    "pdfjs-dist": "2.16.105"
+    "pdfjs-dist": "4.10.38"
   }
 }
