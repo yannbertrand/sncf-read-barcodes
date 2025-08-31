@@ -1,11 +1,5 @@
-export const getImageSrcValue = (imageBuffer: ArrayBuffer): string => {
-	return URL.createObjectURL(new Blob([imageBuffer], { type: `image/png` }));
-};
-
-export const createImageElement = (
-	imageBuffer: ArrayBuffer,
-): HTMLImageElement => {
+export const createImageElement = (imageBlob: Blob): HTMLImageElement => {
 	const imgElement = document.createElement("img");
-	imgElement.setAttribute("src", getImageSrcValue(imageBuffer));
+	imgElement.setAttribute("src", URL.createObjectURL(imageBlob));
 	return imgElement;
 };

@@ -5,14 +5,12 @@ import type { TicketInfo } from "./ticket-info";
 export async function findTicketsInfoFromFile(
 	file: File,
 ): Promise<TicketInfo[]> {
-	const data = await file.arrayBuffer();
 	switch (file.type) {
 		case "application/pdf":
-			console.log("pdf");
-			return await findTicketsInfoInPdf(data);
+			return await findTicketsInfoInPdf(file);
 		case "image/png":
 		default: {
-			const foundTicket = await findTicketInfoInImage(data);
+			const foundTicket = await findTicketInfoInImage(file);
 			return foundTicket ? [foundTicket] : [];
 		}
 	}
