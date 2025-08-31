@@ -7,10 +7,10 @@
 </template>
 
 <script setup lang="ts">
-import { UnknownTicketInfo } from '../services/domain/ticket-info';
+import type { UnknownTicketInfo } from "../services/domain/ticket-info";
 
 const { ticket } = defineProps<{
-  ticket: UnknownTicketInfo;
+	ticket: UnknownTicketInfo;
 }>();
 </script>
 

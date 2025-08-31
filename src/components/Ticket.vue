@@ -7,10 +7,13 @@
 </template>
 
 <script setup lang="ts">
-import { TicketInfo } from '../services/domain/ticket-info';
+import type { TicketInfo } from "../services/domain/ticket-info";
+import SNCFSecutixTicket from "./SNCFSecutixTicket.vue";
+import SNCFTicket from "./SNCFTicket.vue";
+import UnknownTicket from "./UnknownTicket.vue";
 
 const { ticket } = defineProps<{
-  ticket: TicketInfo;
+	ticket: TicketInfo;
 }>();
 </script>
 
