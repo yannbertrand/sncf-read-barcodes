@@ -70,11 +70,11 @@
 </template>
 
 <script setup lang="ts">
-import { Stations } from '~~/services/domain/stations';
-import { SNCFTicketInfo } from '../services/domain/ticket-info';
+import { Stations } from "../services/domain/stations";
+import type { SNCFTicketInfo } from "../services/domain/ticket-info";
 
 const { ticket } = defineProps<{
-  ticket: SNCFTicketInfo;
+	ticket: SNCFTicketInfo;
 }>();
 </script>
 
