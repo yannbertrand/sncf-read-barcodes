@@ -33,6 +33,7 @@ const getSNCFTicketInfo = (str: string[130]): SNCFTicket => {
 const getSecutixTicketInfo = (str: string): SNCFSecutixTicket => {
 	const ticketInfo: SNCFSecutixTicket = {
 		type: "secutix",
+		eTicketNumber: str.slice(4, 260),
 		header: str.slice(0, 4),
 		signature: str.slice(4, 260),
 		constant1: str.slice(260, 264),
@@ -87,6 +88,7 @@ export interface SNCFTicket {
 
 export interface SNCFSecutixTicket {
 	type: "secutix";
+	eTicketNumber: string;
 	header: string;
 	signature: string;
 	constant1: string;
@@ -117,6 +119,7 @@ export interface SNCFSecutixTicket {
 
 export interface UnknownTicket {
 	type: "unknown";
+	eTicketNumber: string;
 	content: string;
 }
 
@@ -134,7 +137,11 @@ const getInfoFromZxing = (
 		return getSecutixTicketInfo(str);
 	}
 
-	return { type: "unknown", content: rawResult.getText() };
+	return {
+		type: "unknown",
+		eTicketNumber: `${Math.ceil(Math.random() * 1000000)}`,
+		content: rawResult.getText(),
+	};
 };
 
 export function getInfoFromZxingResult(zxingResult: Result) {

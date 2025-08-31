@@ -1,18 +1,23 @@
 <template>
   <article class="ticket">
-    <SNCFTicket v-if="ticket.info.type === 'sncf'" :ticket="ticket" />
-    <SNCFSecutixTicket v-if="ticket.info.type === 'secutix'" :ticket="ticket" />
-    <UnknownTicket v-if="ticket.info.type === 'unknown'" :ticket="ticket" />
+    <SNCFTicket v-if="ticket.info.type === 'sncf'" :ticket="ticket as SNCFTicketInfo" />
+    <SNCFSecutixTicket v-if="ticket.info.type === 'secutix'" :ticket="ticket as SNCFSecutixTicketInfo" />
+    <UnknownTicket v-if="ticket.info.type === 'unknown'" :ticket="ticket as UnknownTicketInfo" />
   </article>
 </template>
 
 <script setup lang="ts">
-import type { TicketInfo } from "../services/domain/ticket-info";
+import type {
+	SNCFSecutixTicketInfo,
+	SNCFTicketInfo,
+	TicketInfo,
+	UnknownTicketInfo,
+} from "../services/domain/ticket-info";
 import SNCFSecutixTicket from "./SNCFSecutixTicket.vue";
 import SNCFTicket from "./SNCFTicket.vue";
 import UnknownTicket from "./UnknownTicket.vue";
 
-const { ticket } = defineProps<{
+defineProps<{
 	ticket: TicketInfo;
 }>();
 </script>

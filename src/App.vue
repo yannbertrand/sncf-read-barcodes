@@ -21,13 +21,18 @@
 import { computed, defineComponent, reactive } from "vue";
 import Ticket from "./components/Ticket.vue";
 import { findTicketsInfoFromFile } from "./services/domain/find-tickets-info-from-file";
+import type { TicketInfo } from "./services/domain/ticket-info";
 
 export default defineComponent({
 	setup() {
-		const result = reactive({ tickets: [] });
+		const result = reactive<{ tickets: TicketInfo[] }>({ tickets: [] });
 		const onFileChange = async (event: Event) => {
 			result.tickets = [];
-			const file = event.target.files[0];
+			const file = (event.target as HTMLInputElement)?.files?.[0];
+			if (!file) {
+				throw new Error("No file found");
+			}
+
 			console.log(`Looking for tickets in ${file.name}`);
 			const tickets = await findTicketsInfoFromFile(file);
 			console.log(`Found ${tickets.length} tickets`);

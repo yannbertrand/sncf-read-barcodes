@@ -1,4 +1,3 @@
-// import { UnknownTicket } from "~~/.nuxt/components";
 import type {
 	SNCFSecutixTicket,
 	SNCFTicket,
@@ -6,7 +5,7 @@ import type {
 } from "../infrastructure/low-level/get-info-from-zxing-result";
 
 export interface TicketInfo {
-	info: SNCFTicket | UnknownTicket;
+	info: SNCFTicket | SNCFSecutixTicket | UnknownTicket;
 	imgSrcValue: string;
 }
 

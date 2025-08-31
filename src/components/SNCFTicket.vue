@@ -1,79 +1,83 @@
 <template>
   <h3 class="title">Dossier {{ ticket.info.passengerNameRecord }}</h3>
   <table class="info">
-    <tr>
-      <th>Date</th>
-      <td>{{ ticket.info.travelDate }}</td>
-    </tr>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <td>{{ ticket.info.travelDate }}</td>
+      </tr>
+    </thead>
     <tbody class="trip">
       <tr>
         <td colspan="2">
-          {{ Stations[ticket.info.departureStationFirstLeg] }}
+          {{ getStation(ticket.info.departureStationFirstLeg) }}
         </td>
       </tr>
       <tr>
         <td colspan="2">↓</td>
       </tr>
       <tr>
-        <td colspan="2">{{ Stations[ticket.info.arrivalStationFirstLeg] }}</td>
+        <td colspan="2">{{ getStation(ticket.info.arrivalStationFirstLeg) }}</td>
       </tr>
       <template
         v-if="
-          ticket.info.departureStationSecondLeg &&
-          ticket.info.arrivalStationSecondLeg
-        "
+        ticket.info.departureStationSecondLeg &&
+        ticket.info.arrivalStationSecondLeg
+      "
       >
-        <tr>
-          <td colspan="2">•</td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            {{ Stations[ticket.info.departureStationSecondLeg] }}
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2">↓</td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            {{ Stations[ticket.info.arrivalStationSecondLeg] }}
-          </td>
-        </tr>
+      <tr>
+        <td colspan="2">•</td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          {{ getStation(ticket.info.departureStationSecondLeg) }}
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">↓</td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          {{ getStation(ticket.info.arrivalStationSecondLeg) }}
+        </td>
+      </tr>
       </template>
     </tbody>
-    <tr>
-      <th>Prénom</th>
-      <td>{{ ticket.info.travellerFirstName }}</td>
-    </tr>
-    <tr>
-      <th>Nom</th>
-      <td>{{ ticket.info.travellerLastName }}</td>
-    </tr>
-    <tr>
-      <th>Classe</th>
-      <td>{{ ticket.info.classFirstLeg }}</td>
-    </tr>
-    <tr>
-      <th>n° train</th>
-      <td>{{ ticket.info.trainNumberFirstLeg }}</td>
-    </tr>
-    <tr v-if="ticket.info.trainNumberSecondLeg">
-      <th>n° train 2</th>
-      <td>{{ ticket.info.trainNumberSecondLeg }}</td>
-    </tr>
-    <tr>
-      <th>n° eTicket</th>
-      <td>{{ ticket.info.eTicketNumber }}</td>
-    </tr>
+    <tfoot>
+      <tr>
+        <th>Prénom</th>
+        <td>{{ ticket.info.travellerFirstName }}</td>
+      </tr>
+      <tr>
+        <th>Nom</th>
+        <td>{{ ticket.info.travellerLastName }}</td>
+      </tr>
+      <tr>
+        <th>Classe</th>
+        <td>{{ ticket.info.classFirstLeg }}</td>
+      </tr>
+      <tr>
+        <th>n° train</th>
+        <td>{{ ticket.info.trainNumberFirstLeg }}</td>
+      </tr>
+      <tr v-if="ticket.info.trainNumberSecondLeg">
+        <th>n° train 2</th>
+        <td>{{ ticket.info.trainNumberSecondLeg }}</td>
+      </tr>
+      <tr>
+        <th>n° eTicket</th>
+        <td>{{ ticket.info.eTicketNumber }}</td>
+      </tr>
+    </tfoot>
   </table>
   <img class="code" :src="ticket.imgSrcValue" alt="" />
 </template>
 
 <script setup lang="ts">
-import { Stations } from "../services/domain/stations";
+import { getStation } from "../services/domain/stations";
 import type { SNCFTicketInfo } from "../services/domain/ticket-info";
 
-const { ticket } = defineProps<{
+defineProps<{
 	ticket: SNCFTicketInfo;
 }>();
 </script>

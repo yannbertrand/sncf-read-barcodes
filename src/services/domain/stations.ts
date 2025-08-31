@@ -1,352 +1,359 @@
-export const Stations = {
-	FRXAB: "Abbeville",
-	FRMLW: "Aéroport CDG  2 TGV",
-	FRXAG: "Agde",
-	FRAGF: "Agen",
-	FRAIS: "Ailly Sur Somme",
-	FRQAI: "Aime la Plagne",
-	FRQXB: "Aix en Provence",
-	FRAIE: "Aix en Provence TGV",
-	FRXAI: "Aix les Bains le Revard",
-	FRALE: "Albens",
-	FRXAV: "Albertville",
-	FRAFJ: "Albi ville",
-	FRXAN: "Alençon",
-	FRALC: "Allassac",
-	FRAMB: "Ambérieu",
-	FRQAM: "Amiens",
-	FREFN: "Ancenis",
-	FRACL: "Angers St Laud",
-	FRANG: "Angoulême",
-	FRNCY: "Annecy",
-	FRQNJ: "Annemasse",
-	FRXAT: "Antibes",
-	FRXAC: "Arcachon",
-	FRART: "Argentan",
-	FRHZA: "Arles",
-	FRQRV: "Arras",
-	FRAUH: "Auch",
-	FRXOY: "Aulnoye Aymeries",
-	FRXUY: "Auray",
-	FRHIQ: "Aurec",
-	FRAUR: "Aurillac",
-	FRASG: "Auxerre Saint Gervais",
-	FRAES: "Avignon Centre",
-	FRIHW: "Avignon Sud",
-	FRAVG: "Avignon TGV",
-	FRXBD: "Bar le Duc",
-	FRHIT: "Bas-Monistrol",
-	FRXBY: "Bayonne",
-	FRXBV: "Beaune",
-	FRBOR: "Belfort",
-	FRTJA: "Belfort Montbéliard TGV",
-	FRXBF: "Bellegarde",
-	FREGC: "Bergerac",
-	FRTJB: "Besançon Franche-Comté TGV",
-	FRABG: "Besançon Viotte",
-	FRXBH: "Béthune",
-	FRBZR: "Béziers",
-	FRBIQ: "Biarritz",
-	FRFAC: "Biganos - Facture",
-	FRXBQ: "Blois",
-	FRHTV: "Bonneville",
-	FRHSL: "Bons en Chablais",
-	FRBOJ: "Bordeaux St-Jean",
-	FRAEB: "Boulogne Ville",
-	FRXBK: "Bourg en Bresse",
-	FRBOU: "Bourges",
-	FRQBM: "Bourg St Maurice",
-	FRBSS: "Boussens",
-	FRBES: "Brest",
-	FRXBC: "Briançon",
-	FRHVV: "Brignoud",
-	FRBVE: "Brive La Gaillarde",
-	FRCFR: "Caen",
-	FRZAO: "Cahors",
-	FRSTH: "Calais Frethun",
-	FRAEA: "Calais Ville",
-	FRAFX: "Cambrai",
-	FRJCA: "Cannes",
-	FRCCF: "Carcassonne",
-	FRCTY: "Castelnaudary",
-	FRHVJ: "Châbons",
-	FRCGY: "Chagny",
-	FRXCR: "Chalons en Champagne",
-	FRXCD: "Chalon sur Saône",
-	FRCMF: "Chambéry - Challes Les Eaux",
-	FREAH: "Champagne Ardenne TGV",
-	FRXCZ: "Charleville Mézières",
-	FRQTJ: "Chartres",
-	FRCHR: "Châteauroux",
-	FRXCY: "Château Thierry",
-	FRXCX: "Châtellerault",
-	FRXCW: "Chaumont",
-	FRACK: "Cherbourg",
-	FRCFE: "Clermont Ferrand",
-	FRHCL: "Clermont-La Rotonde",
-	FRCLI: "Clisson",
-	FRHTZ: "Cluses",
-	FRAEJ: "Colmar",
-	FRGAG: "Commentry",
-	FRXCP: "Compiègne",
-	FRGSH: "Cosne sur Loire",
-	FRCSF: "Creil",
-	FRCKH: "Croix - Wasquehal",
-	FRCCY: "Culmont - Chalindrey",
-	FRCUZ: "Culoz",
-	FRACG: "Dax",
-	FRGTH: "Decize",
-	FRAFD: "Dieppe",
-	FRABA: "Dijon Ville",
-	FRDOL: "Dol",
-	FRACE: "Dole Ville",
-	FRDON: "Don Sainghin",
-	FRXDN: "Douai",
-	FRXDR: "Dreux",
-	FRADI: "Dunkerque",
-	FRECE: "Echirolles",
-	FRXEP: "Epernay",
-	FREPL: "Epinal",
-	FRETA: "Etaples-le Touquet",
-	FRXEB: "Evian les Bains",
-	FREVX: "Evreux Normandie",
-	FRBQT: "Forbach",
-	FRFRA: "Frasne",
-	FRFRO: "Frouard",
-	FRTGO: "Futuroscope",
-	FRGAN: "Gannat",
-	FRGAT: "Gap",
-	FRHVX: "Goncelin",
-	FRFSI: "Gourdon",
-	FRGFR: "Granville",
-	FRGNB: "Grenoble",
-	FRHVS: "Grenoble Universités Gières",
-	FRHTB: "Grésy sur Aix",
-	FRHTO: "Groisy-Thorens-la-Caille",
-	FRXGT: "Guéret",
-	FRGGP: "Guingamp",
-	FRHZK: "Hazebrouck",
-	FRAEF: "Hendaye",
-	FRXHE: "Hyères",
-	FRGMU: "Joigny",
-	FRJSY: "Juvisy TGV",
-	FRJEE: "La Baule Escoublac",
-	FRGSL: "La Charité",
-	FREFZ: "La Haie Fouassière",
-	FRLAM: "Lamballe",
-	FRLEY: "Lancey",
-	FRXLD: "Landerneau",
-	FRHPG: "Landry",
-	FRLAG: "Langres",
-	FRLNZ: "Lannemezan",
-	FRLAI: "Lannion",
-	FRLRH: "La Rochelle Ville",
-	FRISI: "Laroche Migennes",
-	FRLRF: "La Roche sur Foron",
-	FRXRO: "La Roche sur Yon",
-	FRLST: "La Souterraine",
-	FRFCJ: "La Teste",
-	FRACR: "Laval",
-	FRXCC: "Le Creusot TGV",
-	FREGU: "Le Croisic",
-	FRHVK: "Le Grand Lemps",
-	FRAEZ: "Le Havre",
-	FRAET: "Le Mans",
-	FRXLE: "Lens",
-	FREGA: "Le Pallet",
-	FREGS: "Le Pouliguen",
-	FRLPY: "Le Puy en Velay",
-	FRXRS: "Les Arcs Draguignan",
-	FRLAB: "Les Aubrais Orléans",
-	FRLSO: "Les Sables d'Olonne",
-	FRHLS: "Lezoux",
-	FRXLR: "Libourne",
-	FRLLE: "Lille Europe",
-	FRADJ: "Lille Flandres",
-	FRAGQ: "Limoges Bénédictins",
-	FRXLX: "Lisieux",
-	FRCQL: "Longueau",
-	FRLWY: "Longwy",
-	FRXLL: "Lons le Saunier",
-	FRLRT: "Lorient",
-	FREAM: "Lorraine TGV",
-	FRLDE: "Lourdes",
-	FRLNE: "Lunéville",
-	FRLUR: "Lure",
-	FRHTF: "Lyon Jean Macé",
-	FRLPD: "Lyon Part Dieu",
-	FRLPE: "Lyon Perrache",
-	FRJDQ: "Lyon St Exupéry TGV",
-	FRHSK: "Machilly",
-	FRMLT: "Macon Loche TGV",
-	FRHGU: "Macon Ville",
-	FRHUB: "Magland",
-	FRMTE: "Mantes la Jolie",
-	FRHTW: "Marigniers",
-	FRXMR: "Marmande",
-	FRMLV: "Marne la Vallée Chessy",
-	FRMSC: "Marseille St Charles",
-	FRFKP: "Masseret",
-	FRDJU: "Massy TGV",
-	FRXME: "Maubeuge",
-	FRXMT: "Menton",
-	FRADE: "Metz Ville",
-	FREAJ: "Meuse TGV",
-	FRMAZ: "Miramas",
-	FRAGR: "Modane",
-	FRABZ: "Moirans",
-	FRXMM: "Monaco Monte Carlo",
-	FRGNX: "Montargis",
-	FRXMW: "Montauban Ville Bourbon",
-	FRGWE: "Montbard",
-	FRXMF: "Montbéliard",
-	FRMCH: "Montchanin",
-	FRXMJ: "Mont de Marsan",
-	FRXMK: "Montélimar",
-	FRMCU: "Montluçon Ville",
-	FRMML: "Montmélian",
-	FRMPL: "Montpellier St Roch",
-	FRGZG: "Morez",
-	FRMXN: "Morlaix",
-	FRMCD: "Mouchard",
-	FRXMU: "Moulins Sur Allier",
-	FRQMU: "Moutiers Salins Brides-les-Bains",
-	FRAEK: "Mulhouse Ville",
-	FRENC: "Nancy Ville",
-	FRNTE: "Nantes",
-	FRXNA: "Narbonne",
-	FRNCH: "Neufchateau",
-	FRNVS: "Nevers",
-	FRNIC: "Nice Ville",
-	FRFNI: "Nîmes",
-	FRNIT: "Niort",
-	FRGXC: "Nuits Saint-Georges",
-	FRHQN: "Nurieux",
-	FROIL: "Oissel",
-	FRXOG: "Orange",
-	FRAFK: "Orléans",
-	FRGFI: "Orthez",
-	FROYO: "Oyonnax",
-	FRPAZ: "Paris Austerlitz",
-	FRPBE: "Paris Bercy",
-	FRPST: "Paris Est",
-	FRPLY: "Paris Gare de Lyon",
-	FRPMO: "Paris Montparnasse",
-	FRPNO: "Paris Nord",
-	FRPSL: "Paris St Lazare",
-	FRAEE: "Pau",
-	FRABF: "Périgueux",
-	FRPGF: "Perpignan",
-	FRHSN: "Perrignier",
-	FRPLT: "Plouaret-Trégor",
-	FRPIS: "Poitiers",
-	FRIFI: "Poliénas",
-	FRPTL: "Pontarlier",
-	FRHVZ: "Pontcharra sur Bréda Allevard",
-	FRPDO: "Pont de Dore le Chambon",
-	FREGR: "Pornichet",
-	FRHTK: "Pringy",
-	FRUIP: "Quimper",
-	FRECO: "Quimperlé",
-	FRCVU: "Rang du Fliers - Verton - Berck",
-	FRHVN: "Reaumont Saint-Cassien",
-	FRXRN: "Redon",
-	FRHUF: "Reignier",
-	FRRHE: "Reims",
-	FRRNT: "Remiremont",
-	FRRNS: "Rennes",
-	FRBDT: "Rethel",
-	FRHMS: "Retournac",
-	FRRIO: "Riom-Châtel Guyon",
-	FRHVM: "Rives",
-	FRRNE: "Roanne",
-	FRRCO: "Rochefort",
-	FRRDZ: "Rodez",
-	FRRSP: "Rosporden",
-	FRADP: "Roubaix",
-	FRURD: "Rouen Rive Droite",
-	FRRYN: "Royan",
-	FRHKO: "Royat-Chamalières",
-	FRFDS: "Ruffec",
-	FRHTE: "Rumilly",
-	FRSAB: "Sablé",
-	FRSZE: "Saincaize",
-	FRSAG: "Saint-André le Gaz",
-	FRHOJ: "Saint-Avre la Chambre",
-	FRSBK: "Saint-Brieuc",
-	FRHEL: "Saint-Clair les Roches",
-	FRXTD: "Saint-Dié des Vosges",
-	FRHVR: "Saint-Egrève-Saint-Robert",
-	FRXST: "Saintes",
-	FRHHD: "Saint-Etienne Châteaucreux",
-	FRSGF: "Saint-Germain des Fossés",
-	FRXGF: "Saint-Gervais les Bains Le Fayet",
-	FRITY: "Saint-Hilaire-Saint-Nazaire",
-	FRXJZ: "Saint-Jean de Luz Ciboure",
-	FRHPN: "Saint-Jean de Maurienne Arvan",
-	FRHSD: "Saint-Julien en Genevois",
-	FREJC: "Saint-Maixent",
-	FRXSB: "Saint-Malo",
-	FRIFG: "Saint-Marcellin (Isère)",
-	FRIWZ: "Saint-Martin Bellevue",
-	FRXVR: "Saint-Michel Valloire",
-	FRSNR: "Saint-Nazaire",
-	FRXSG: "Saint-Omer",
-	FRHTT: "Saint-Pierre en Faucigny",
-	FRSPT: "Saint-Pol sur Ternoise",
-	FRXSJ: "Saint-Quentin",
-	FRXSK: "Saint-Raphaël Valescure",
-	FRSSL: "Saint-Sulpice Laurière",
-	FRXSN: "Sallanches Combloux Megève",
-	FRSBG: "Sarrebourg",
-	FRACN: "Saumur",
-	FRSNE: "Saverne",
-	FRXSW: "Sedan",
-	FRXSQ: "Sélestat",
-	FRXSF: "Sens",
-	FRXSY: "Sète",
-	FRFPH: "St Gaudens",
-	FRXSH: "St Pierre des Corps",
-	FRAEG: "Strasbourg",
-	FREIP: "Surgères",
-	FRXTB: "Tarbes",
-	FRTHP: "TGV Haute-Picardie",
-	FRXTH: "Thionville",
-	FRXTS: "Thonon les Bains",
-	FRTOL: "Toul",
-	FRTLN: "Toulon",
-	FRXYT: "Toulouse Matabiau",
-	FRADM: "Tourcoing",
-	FRHGQ: "Tournus",
-	FRAFW: "Tours",
-	FRTRD: "Trouville - Deauville",
-	FRQYR: "Troyes",
-	FRIFJ: "Tullins-Fures",
-	FRUSS: "Ussel",
-	FRAAW: "Uzerche",
-	FRVDR: "Val De Reuil",
-	FRVAF: "Valence",
-	FRFRK: "Valence d'Agen",
-	FRVLA: "Valence TGV Rhône Alpes Sud",
-	FRXVS: "Valenciennes",
-	FRHSB: "Valleiry",
-	FRVNE: "Vannes",
-	FRESL: "Vendôme Villiers sur Loir",
-	FRDQC: "Vernon",
-	FRDHT: "Versailles Chantiers",
-	FRXVO: "Vesoul",
-	FRVHY: "Vichy",
-	FRXVI: "Vienne",
-	FRXVZ: "Vierzon Ville",
-	FRFIY: "Vigeois",
-	FRDUO: "Villedieu Les Poêles",
-	FRFUP: "Villefranche de Lauragais",
-	FRIFH: "Vinay",
-	FRDUX: "Vire",
-	FRHVI: "Virieu sur Bourbre",
-	FRXVT: "Vitré",
-	FRBFO: "Vitry le François",
-	FRHNZ: "Viviers du Lac",
-	FRHVO: "Voiron",
-	FRHVQ: "Voreppe",
+export const Stations = new Map();
+Stations.set('FRXAB', "Abbeville")
+Stations.set('FRMLW', "Aéroport CDG  2 TGV")
+Stations.set('FRXAG', "Agde")
+Stations.set('FRAGF', "Agen")
+Stations.set('FRAIS', "Ailly Sur Somme")
+Stations.set('FRQAI', "Aime la Plagne")
+Stations.set('FRQXB', "Aix en Provence")
+Stations.set('FRAIE', "Aix en Provence TGV")
+Stations.set('FRXAI', "Aix les Bains le Revard")
+Stations.set('FRALE', "Albens")
+Stations.set('FRXAV', "Albertville")
+Stations.set('FRAFJ', "Albi ville")
+Stations.set('FRXAN', "Alençon")
+Stations.set('FRALC', "Allassac")
+Stations.set('FRAMB', "Ambérieu")
+Stations.set('FRQAM', "Amiens")
+Stations.set('FREFN', "Ancenis")
+Stations.set('FRACL', "Angers St Laud")
+Stations.set('FRANG', "Angoulême")
+Stations.set('FRNCY', "Annecy")
+Stations.set('FRQNJ', "Annemasse")
+Stations.set('FRXAT', "Antibes")
+Stations.set('FRXAC', "Arcachon")
+Stations.set('FRART', "Argentan")
+Stations.set('FRHZA', "Arles")
+Stations.set('FRQRV', "Arras")
+Stations.set('FRAUH', "Auch")
+Stations.set('FRXOY', "Aulnoye Aymeries")
+Stations.set('FRXUY', "Auray")
+Stations.set('FRHIQ', "Aurec")
+Stations.set('FRAUR', "Aurillac")
+Stations.set('FRASG', "Auxerre Saint Gervais")
+Stations.set('FRAES', "Avignon Centre")
+Stations.set('FRIHW', "Avignon Sud")
+Stations.set('FRAVG', "Avignon TGV")
+Stations.set('FRXBD', "Bar le Duc")
+Stations.set('FRHIT', "Bas-Monistrol")
+Stations.set('FRXBY', "Bayonne")
+Stations.set('FRXBV', "Beaune")
+Stations.set('FRBOR', "Belfort")
+Stations.set('FRTJA', "Belfort Montbéliard TGV")
+Stations.set('FRXBF', "Bellegarde")
+Stations.set('FREGC', "Bergerac")
+Stations.set('FRTJB', "Besançon Franche-Comté TGV")
+Stations.set('FRABG', "Besançon Viotte")
+Stations.set('FRXBH', "Béthune")
+Stations.set('FRBZR', "Béziers")
+Stations.set('FRBIQ', "Biarritz")
+Stations.set('FRFAC', "Biganos - Facture")
+Stations.set('FRXBQ', "Blois")
+Stations.set('FRHTV', "Bonneville")
+Stations.set('FRHSL', "Bons en Chablais")
+Stations.set('FRBOJ', "Bordeaux St-Jean")
+Stations.set('FRAEB', "Boulogne Ville")
+Stations.set('FRXBK', "Bourg en Bresse")
+Stations.set('FRBOU', "Bourges")
+Stations.set('FRQBM', "Bourg St Maurice")
+Stations.set('FRBSS', "Boussens")
+Stations.set('FRBES', "Brest")
+Stations.set('FRXBC', "Briançon")
+Stations.set('FRHVV', "Brignoud")
+Stations.set('FRBVE', "Brive La Gaillarde")
+Stations.set('FRCFR', "Caen")
+Stations.set('FRZAO', "Cahors")
+Stations.set('FRSTH', "Calais Frethun")
+Stations.set('FRAEA', "Calais Ville")
+Stations.set('FRAFX', "Cambrai")
+Stations.set('FRJCA', "Cannes")
+Stations.set('FRCCF', "Carcassonne")
+Stations.set('FRCTY', "Castelnaudary")
+Stations.set('FRHVJ', "Châbons")
+Stations.set('FRCGY', "Chagny")
+Stations.set('FRXCR', "Chalons en Champagne")
+Stations.set('FRXCD', "Chalon sur Saône")
+Stations.set('FRCMF', "Chambéry - Challes Les Eaux")
+Stations.set('FREAH', "Champagne Ardenne TGV")
+Stations.set('FRXCZ', "Charleville Mézières")
+Stations.set('FRQTJ', "Chartres")
+Stations.set('FRCHR', "Châteauroux")
+Stations.set('FRXCY', "Château Thierry")
+Stations.set('FRXCX', "Châtellerault")
+Stations.set('FRXCW', "Chaumont")
+Stations.set('FRACK', "Cherbourg")
+Stations.set('FRCFE', "Clermont Ferrand")
+Stations.set('FRHCL', "Clermont-La Rotonde")
+Stations.set('FRCLI', "Clisson")
+Stations.set('FRHTZ', "Cluses")
+Stations.set('FRAEJ', "Colmar")
+Stations.set('FRGAG', "Commentry")
+Stations.set('FRXCP', "Compiègne")
+Stations.set('FRGSH', "Cosne sur Loire")
+Stations.set('FRCSF', "Creil")
+Stations.set('FRCKH', "Croix - Wasquehal")
+Stations.set('FRCCY', "Culmont - Chalindrey")
+Stations.set('FRCUZ', "Culoz")
+Stations.set('FRACG', "Dax")
+Stations.set('FRGTH', "Decize")
+Stations.set('FRAFD', "Dieppe")
+Stations.set('FRABA', "Dijon Ville")
+Stations.set('FRDOL', "Dol")
+Stations.set('FRACE', "Dole Ville")
+Stations.set('FRDON', "Don Sainghin")
+Stations.set('FRXDN', "Douai")
+Stations.set('FRXDR', "Dreux")
+Stations.set('FRADI', "Dunkerque")
+Stations.set('FRECE', "Echirolles")
+Stations.set('FRXEP', "Epernay")
+Stations.set('FREPL', "Epinal")
+Stations.set('FRETA', "Etaples-le Touquet")
+Stations.set('FRXEB', "Evian les Bains")
+Stations.set('FREVX', "Evreux Normandie")
+Stations.set('FRBQT', "Forbach")
+Stations.set('FRFRA', "Frasne")
+Stations.set('FRFRO', "Frouard")
+Stations.set('FRTGO', "Futuroscope")
+Stations.set('FRGAN', "Gannat")
+Stations.set('FRGAT', "Gap")
+Stations.set('FRHVX', "Goncelin")
+Stations.set('FRFSI', "Gourdon")
+Stations.set('FRGFR', "Granville")
+Stations.set('FRGNB', "Grenoble")
+Stations.set('FRHVS', "Grenoble Universités Gières")
+Stations.set('FRHTB', "Grésy sur Aix")
+Stations.set('FRHTO', "Groisy-Thorens-la-Caille")
+Stations.set('FRXGT', "Guéret")
+Stations.set('FRGGP', "Guingamp")
+Stations.set('FRHZK', "Hazebrouck")
+Stations.set('FRAEF', "Hendaye")
+Stations.set('FRXHE', "Hyères")
+Stations.set('FRGMU', "Joigny")
+Stations.set('FRJSY', "Juvisy TGV")
+Stations.set('FRJEE', "La Baule Escoublac")
+Stations.set('FRGSL', "La Charité")
+Stations.set('FREFZ', "La Haie Fouassière")
+Stations.set('FRLAM', "Lamballe")
+Stations.set('FRLEY', "Lancey")
+Stations.set('FRXLD', "Landerneau")
+Stations.set('FRHPG', "Landry")
+Stations.set('FRLAG', "Langres")
+Stations.set('FRLNZ', "Lannemezan")
+Stations.set('FRLAI', "Lannion")
+Stations.set('FRLRH', "La Rochelle Ville")
+Stations.set('FRISI', "Laroche Migennes")
+Stations.set('FRLRF', "La Roche sur Foron")
+Stations.set('FRXRO', "La Roche sur Yon")
+Stations.set('FRLST', "La Souterraine")
+Stations.set('FRFCJ', "La Teste")
+Stations.set('FRACR', "Laval")
+Stations.set('FRXCC', "Le Creusot TGV")
+Stations.set('FREGU', "Le Croisic")
+Stations.set('FRHVK', "Le Grand Lemps")
+Stations.set('FRAEZ', "Le Havre")
+Stations.set('FRAET', "Le Mans")
+Stations.set('FRXLE', "Lens")
+Stations.set('FREGA', "Le Pallet")
+Stations.set('FREGS', "Le Pouliguen")
+Stations.set('FRLPY', "Le Puy en Velay")
+Stations.set('FRXRS', "Les Arcs Draguignan")
+Stations.set('FRLAB', "Les Aubrais Orléans")
+Stations.set('FRLSO', "Les Sables d'Olonne")
+Stations.set('FRHLS', "Lezoux")
+Stations.set('FRXLR', "Libourne")
+Stations.set('FRLLE', "Lille Europe")
+Stations.set('FRADJ', "Lille Flandres")
+Stations.set('FRAGQ', "Limoges Bénédictins")
+Stations.set('FRXLX', "Lisieux")
+Stations.set('FRCQL', "Longueau")
+Stations.set('FRLWY', "Longwy")
+Stations.set('FRXLL', "Lons le Saunier")
+Stations.set('FRLRT', "Lorient")
+Stations.set('FREAM', "Lorraine TGV")
+Stations.set('FRLDE', "Lourdes")
+Stations.set('FRLNE', "Lunéville")
+Stations.set('FRLUR', "Lure")
+Stations.set('FRHTF', "Lyon Jean Macé")
+Stations.set('FRLPD', "Lyon Part Dieu")
+Stations.set('FRLPE', "Lyon Perrache")
+Stations.set('FRJDQ', "Lyon St Exupéry TGV")
+Stations.set('FRHSK', "Machilly")
+Stations.set('FRMLT', "Macon Loche TGV")
+Stations.set('FRHGU', "Macon Ville")
+Stations.set('FRHUB', "Magland")
+Stations.set('FRMTE', "Mantes la Jolie")
+Stations.set('FRHTW', "Marigniers")
+Stations.set('FRXMR', "Marmande")
+Stations.set('FRMLV', "Marne la Vallée Chessy")
+Stations.set('FRMSC', "Marseille St Charles")
+Stations.set('FRFKP', "Masseret")
+Stations.set('FRDJU', "Massy TGV")
+Stations.set('FRXME', "Maubeuge")
+Stations.set('FRXMT', "Menton")
+Stations.set('FRADE', "Metz Ville")
+Stations.set('FREAJ', "Meuse TGV")
+Stations.set('FRMAZ', "Miramas")
+Stations.set('FRAGR', "Modane")
+Stations.set('FRABZ', "Moirans")
+Stations.set('FRXMM', "Monaco Monte Carlo")
+Stations.set('FRGNX', "Montargis")
+Stations.set('FRXMW', "Montauban Ville Bourbon")
+Stations.set('FRGWE', "Montbard")
+Stations.set('FRXMF', "Montbéliard")
+Stations.set('FRMCH', "Montchanin")
+Stations.set('FRXMJ', "Mont de Marsan")
+Stations.set('FRXMK', "Montélimar")
+Stations.set('FRMCU', "Montluçon Ville")
+Stations.set('FRMML', "Montmélian")
+Stations.set('FRMPL', "Montpellier St Roch")
+Stations.set('FRGZG', "Morez")
+Stations.set('FRMXN', "Morlaix")
+Stations.set('FRMCD', "Mouchard")
+Stations.set('FRXMU', "Moulins Sur Allier")
+Stations.set('FRQMU', "Moutiers Salins Brides-les-Bains")
+Stations.set('FRAEK', "Mulhouse Ville")
+Stations.set('FRENC', "Nancy Ville")
+Stations.set('FRNTE', "Nantes")
+Stations.set('FRXNA', "Narbonne")
+Stations.set('FRNCH', "Neufchateau")
+Stations.set('FRNVS', "Nevers")
+Stations.set('FRNIC', "Nice Ville")
+Stations.set('FRFNI', "Nîmes")
+Stations.set('FRNIT', "Niort")
+Stations.set('FRGXC', "Nuits Saint-Georges")
+Stations.set('FRHQN', "Nurieux")
+Stations.set('FROIL', "Oissel")
+Stations.set('FRXOG', "Orange")
+Stations.set('FRAFK', "Orléans")
+Stations.set('FRGFI', "Orthez")
+Stations.set('FROYO', "Oyonnax")
+Stations.set('FRPAZ', "Paris Austerlitz")
+Stations.set('FRPBE', "Paris Bercy")
+Stations.set('FRPST', "Paris Est")
+Stations.set('FRPLY', "Paris Gare de Lyon")
+Stations.set('FRPMO', "Paris Montparnasse")
+Stations.set('FRPNO', "Paris Nord")
+Stations.set('FRPSL', "Paris St Lazare")
+Stations.set('FRAEE', "Pau")
+Stations.set('FRABF', "Périgueux")
+Stations.set('FRPGF', "Perpignan")
+Stations.set('FRHSN', "Perrignier")
+Stations.set('FRPLT', "Plouaret-Trégor")
+Stations.set('FRPIS', "Poitiers")
+Stations.set('FRIFI', "Poliénas")
+Stations.set('FRPTL', "Pontarlier")
+Stations.set('FRHVZ', "Pontcharra sur Bréda Allevard")
+Stations.set('FRPDO', "Pont de Dore le Chambon")
+Stations.set('FREGR', "Pornichet")
+Stations.set('FRHTK', "Pringy")
+Stations.set('FRUIP', "Quimper")
+Stations.set('FRECO', "Quimperlé")
+Stations.set('FRCVU', "Rang du Fliers - Verton - Berck")
+Stations.set('FRHVN', "Reaumont Saint-Cassien")
+Stations.set('FRXRN', "Redon")
+Stations.set('FRHUF', "Reignier")
+Stations.set('FRRHE', "Reims")
+Stations.set('FRRNT', "Remiremont")
+Stations.set('FRRNS', "Rennes")
+Stations.set('FRBDT', "Rethel")
+Stations.set('FRHMS', "Retournac")
+Stations.set('FRRIO', "Riom-Châtel Guyon")
+Stations.set('FRHVM', "Rives")
+Stations.set('FRRNE', "Roanne")
+Stations.set('FRRCO', "Rochefort")
+Stations.set('FRRDZ', "Rodez")
+Stations.set('FRRSP', "Rosporden")
+Stations.set('FRADP', "Roubaix")
+Stations.set('FRURD', "Rouen Rive Droite")
+Stations.set('FRRYN', "Royan")
+Stations.set('FRHKO', "Royat-Chamalières")
+Stations.set('FRFDS', "Ruffec")
+Stations.set('FRHTE', "Rumilly")
+Stations.set('FRSAB', "Sablé")
+Stations.set('FRSZE', "Saincaize")
+Stations.set('FRSAG', "Saint-André le Gaz")
+Stations.set('FRHOJ', "Saint-Avre la Chambre")
+Stations.set('FRSBK', "Saint-Brieuc")
+Stations.set('FRHEL', "Saint-Clair les Roches")
+Stations.set('FRXTD', "Saint-Dié des Vosges")
+Stations.set('FRHVR', "Saint-Egrève-Saint-Robert")
+Stations.set('FRXST', "Saintes")
+Stations.set('FRHHD', "Saint-Etienne Châteaucreux")
+Stations.set('FRSGF', "Saint-Germain des Fossés")
+Stations.set('FRXGF', "Saint-Gervais les Bains Le Fayet")
+Stations.set('FRITY', "Saint-Hilaire-Saint-Nazaire")
+Stations.set('FRXJZ', "Saint-Jean de Luz Ciboure")
+Stations.set('FRHPN', "Saint-Jean de Maurienne Arvan")
+Stations.set('FRHSD', "Saint-Julien en Genevois")
+Stations.set('FREJC', "Saint-Maixent")
+Stations.set('FRXSB', "Saint-Malo")
+Stations.set('FRIFG', "Saint-Marcellin (Isère)")
+Stations.set('FRIWZ', "Saint-Martin Bellevue")
+Stations.set('FRXVR', "Saint-Michel Valloire")
+Stations.set('FRSNR', "Saint-Nazaire")
+Stations.set('FRXSG', "Saint-Omer")
+Stations.set('FRHTT', "Saint-Pierre en Faucigny")
+Stations.set('FRSPT', "Saint-Pol sur Ternoise")
+Stations.set('FRXSJ', "Saint-Quentin")
+Stations.set('FRXSK', "Saint-Raphaël Valescure")
+Stations.set('FRSSL', "Saint-Sulpice Laurière")
+Stations.set('FRXSN', "Sallanches Combloux Megève")
+Stations.set('FRSBG', "Sarrebourg")
+Stations.set('FRACN', "Saumur")
+Stations.set('FRSNE', "Saverne")
+Stations.set('FRXSW', "Sedan")
+Stations.set('FRXSQ', "Sélestat")
+Stations.set('FRXSF', "Sens")
+Stations.set('FRXSY', "Sète")
+Stations.set('FRFPH', "St Gaudens")
+Stations.set('FRXSH', "St Pierre des Corps")
+Stations.set('FRAEG', "Strasbourg")
+Stations.set('FREIP', "Surgères")
+Stations.set('FRXTB', "Tarbes")
+Stations.set('FRTHP', "TGV Haute-Picardie")
+Stations.set('FRXTH', "Thionville")
+Stations.set('FRXTS', "Thonon les Bains")
+Stations.set('FRTOL', "Toul")
+Stations.set('FRTLN', "Toulon")
+Stations.set('FRXYT', "Toulouse Matabiau")
+Stations.set('FRADM', "Tourcoing")
+Stations.set('FRHGQ', "Tournus")
+Stations.set('FRAFW', "Tours")
+Stations.set('FRTRD', "Trouville - Deauville")
+Stations.set('FRQYR', "Troyes")
+Stations.set('FRIFJ', "Tullins-Fures")
+Stations.set('FRUSS', "Ussel")
+Stations.set('FRAAW', "Uzerche")
+Stations.set('FRVDR', "Val De Reuil")
+Stations.set('FRVAF', "Valence")
+Stations.set('FRFRK', "Valence d'Agen")
+Stations.set('FRVLA', "Valence TGV Rhône Alpes Sud")
+Stations.set('FRXVS', "Valenciennes")
+Stations.set('FRHSB', "Valleiry")
+Stations.set('FRVNE', "Vannes")
+Stations.set('FRESL', "Vendôme Villiers sur Loir")
+Stations.set('FRDQC', "Vernon")
+Stations.set('FRDHT', "Versailles Chantiers")
+Stations.set('FRXVO', "Vesoul")
+Stations.set('FRVHY', "Vichy")
+Stations.set('FRXVI', "Vienne")
+Stations.set('FRXVZ', "Vierzon Ville")
+Stations.set('FRFIY', "Vigeois")
+Stations.set('FRDUO', "Villedieu Les Poêles")
+Stations.set('FRFUP', "Villefranche de Lauragais")
+Stations.set('FRIFH', "Vinay")
+Stations.set('FRDUX', "Vire")
+Stations.set('FRHVI', "Virieu sur Bourbre")
+Stations.set('FRXVT', "Vitré")
+Stations.set('FRBFO', "Vitry le François")
+Stations.set('FRHNZ', "Viviers du Lac")
+Stations.set('FRHVO', "Voiron")
+Stations.set('FRHVQ', "Voreppe")
+
+export const getStation = (code: string): string => {
+	if (Stations.has(code)) {
+		return Stations.get(code);
+	}
+
+	return "Station inconnue";
 };

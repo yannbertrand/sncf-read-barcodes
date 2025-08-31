@@ -2,7 +2,7 @@ import * as PDFJs from "pdfjs-dist";
 
 PDFJs.GlobalWorkerOptions.workerSrc = "/pdf.worker.js";
 
-const parsePage = async (page, pageInfo) => {
+const parsePage = async (page: any, pageInfo: any) => {
 	const scale = 1.5;
 	const viewport = page.getViewport({ scale });
 
@@ -16,13 +16,15 @@ const parsePage = async (page, pageInfo) => {
 	const opList = await page.getOperatorList();
 	const svgGfx = new PDFJs.SVGGraphics(page.commonObjs, page.objs);
 	const svg = await svgGfx.getSVG(opList, viewport);
-	svg.children[1].querySelectorAll("image").forEach(async (svgImgElement) => {
-		const imgSrc = svgImgElement.getAttribute("xlink:href");
-		const imgElement = document.createElement("img");
-		imgElement.setAttribute("src", imgSrc);
+	svg.children[1]
+		.querySelectorAll("image")
+		.forEach(async (svgImgElement: Element) => {
+			const imgSrc = svgImgElement.getAttribute("xlink:href") as string;
+			const imgElement = document.createElement("img");
+			imgElement.setAttribute("src", imgSrc);
 
-		pageInfo.images.push(imgElement);
-	});
+			pageInfo.images.push(imgElement);
+		});
 
 	pageInfo.svg.doc = svg;
 	return pageInfo;
