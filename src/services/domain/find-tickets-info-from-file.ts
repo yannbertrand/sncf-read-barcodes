@@ -1,4 +1,4 @@
-import { findTicketInfoInImage } from "../infrastructure/find-ticket-info-in-image";
+import { findTicketsInfoInImage } from "../infrastructure/find-tickets-info-in-image";
 import { findTicketsInfoInPdf } from "../infrastructure/find-tickets-info-in-pdf";
 import type { TicketInfo } from "./ticket-info";
 
@@ -10,8 +10,7 @@ export async function findTicketsInfoFromFile(
 			return await findTicketsInfoInPdf(file);
 		case "image/png":
 		default: {
-			const foundTicket = await findTicketInfoInImage(file);
-			return foundTicket ? [foundTicket] : [];
+			return await findTicketsInfoInImage(file);
 		}
 	}
 }

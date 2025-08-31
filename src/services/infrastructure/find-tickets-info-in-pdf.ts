@@ -1,4 +1,4 @@
-import { findTicketInfoInImage } from "./find-ticket-info-in-image";
+import { findTicketsInfoInImage } from "./find-tickets-info-in-image";
 import { convertPdfToImageBlob } from "./low-level/convert-pdf-to-image-blob";
 
 export async function findTicketsInfoInPdf(file: File) {
@@ -6,9 +6,11 @@ export async function findTicketsInfoInPdf(file: File) {
 
 	const ticketsInfo = [];
 	for (const imageBlob of imageBlobs) {
-		const ticketInfo = await findTicketInfoInImage(imageBlob);
-		if (ticketInfo) {
-			ticketsInfo.push(ticketInfo);
+		const foundTicketsInfo = await findTicketsInfoInImage(imageBlob);
+		if (foundTicketsInfo.length > 0) {
+			for (const ticketInfo of foundTicketsInfo) {
+				ticketsInfo.push(ticketInfo);
+			}
 		}
 	}
 	return ticketsInfo;

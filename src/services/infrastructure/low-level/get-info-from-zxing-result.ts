@@ -1,4 +1,4 @@
-import type { Result } from "@zxing/library";
+import type { TicketInfo } from "@/services/domain/ticket-info";
 
 // See https://community.kde.org/KDE_PIM/KItinerary/SNCF_Barcodes
 const getSNCFTicketInfo = (str: string[130]): SNCFTicket => {
@@ -124,9 +124,8 @@ export interface UnknownTicket {
 }
 
 const getInfoFromZxing = (
-	rawResult: Result,
+	str: string,
 ): SNCFTicket | SNCFSecutixTicket | UnknownTicket => {
-	const str = rawResult.getText();
 	if (
 		(str.startsWith("i0CV") || str.startsWith("i1CV")) &&
 		str.length === 131
@@ -134,16 +133,23 @@ const getInfoFromZxing = (
 		return getSNCFTicketInfo(str);
 	}
 	if (str.startsWith("2200")) {
-		return getSecutixTicketInfo(str);
+		const secutixInfo = `2200${" ".repeat(256)}${str.slice(str.indexOf("00T1"))}`;
+		return getSecutixTicketInfo(secutixInfo);
 	}
 
 	return {
 		type: "unknown",
 		eTicketNumber: `${Math.ceil(Math.random() * 1000000)}`,
-		content: rawResult.getText(),
+		content: str,
 	};
 };
 
-export function getInfoFromZxingResult(zxingResult: Result) {
-	return getInfoFromZxing(zxingResult);
+export function getInfoFromZxingResult(
+	zxingResult: string,
+	file: File | Blob,
+): TicketInfo {
+	return {
+		info: getInfoFromZxing(zxingResult),
+		imgSrcValue: URL.createObjectURL(file),
+	};
 }
