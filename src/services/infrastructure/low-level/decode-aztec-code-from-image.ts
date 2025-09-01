@@ -33,7 +33,20 @@ export async function decodeCodeUsingZxingWasm(
 			return [];
 		}
 
-		return results.map((result) => getInfoFromZxingResult(result.text, file));
+		const zxingResults: TicketInfo[] = [];
+		for (const result of results) {
+			const zxingResult = getInfoFromZxingResult(result.text, file);
+			if (
+				zxingResults.find(
+					(r) => r.info.eTicketNumber === zxingResult.info.eTicketNumber,
+				)
+			) {
+				continue;
+			}
+			zxingResults.push(zxingResult);
+		}
+
+		return zxingResults;
 	} catch (error) {
 		console.error("zxing-wasm - Unknown error:", error);
 	}
