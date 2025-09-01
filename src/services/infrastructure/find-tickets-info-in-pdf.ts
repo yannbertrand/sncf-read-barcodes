@@ -6,7 +6,9 @@ export async function findTicketsInfoInPdf(file: File) {
 
 	const ticketsInfo = [];
 	for (const imageBlob of imageBlobs) {
-		const foundTicketsInfo = await findTicketsInfoInImage(imageBlob);
+		const foundTicketsInfo = await findTicketsInfoInImage(
+			new File([imageBlob], "blob.png"),
+		);
 		if (foundTicketsInfo.length > 0) {
 			for (const ticketInfo of foundTicketsInfo) {
 				ticketsInfo.push(ticketInfo);

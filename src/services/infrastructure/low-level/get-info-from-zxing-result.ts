@@ -146,7 +146,7 @@ const getInfoFromZxing = (
 
 export function getInfoFromZxingResult(
 	zxingResult: string,
-	file: File | Blob,
+	file: File,
 ): TicketInfo {
 	return {
 		info: getInfoFromZxing(zxingResult),

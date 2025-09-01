@@ -5,7 +5,7 @@ import { getInfoFromZxingResult } from "./get-info-from-zxing-result.ts";
 import { createImageElement } from "./image-utils.ts";
 
 export async function decodeAztecCodeFromImage(
-	file: File | Blob,
+	file: File,
 ): Promise<TicketInfo[]> {
 	const zxingWasmResult = await decodeCodeUsingZxingWasm(file);
 	if (zxingWasmResult.length > 0) {
@@ -21,7 +21,7 @@ export async function decodeAztecCodeFromImage(
 }
 
 export async function decodeCodeUsingZxingWasm(
-	file: File | Blob,
+	file: File,
 ): Promise<TicketInfo[]> {
 	try {
 		const results = await readBarcodes(file, {
@@ -42,7 +42,7 @@ export async function decodeCodeUsingZxingWasm(
 }
 
 export async function decodeCodeUsingZxingBrowser(
-	file: File | Blob,
+	file: File,
 ): Promise<TicketInfo[]> {
 	try {
 		const codeReader = new BrowserAztecCodeReader();
