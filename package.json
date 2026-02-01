@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@zxing/browser": "0.1.5",
-    "pdfjs-dist": "5.4.530",
+    "pdfjs-dist": "5.4.624",
     "vue": "3.5.27",
     "zxing-wasm": "2.2.4"
   },
