@@ -21,7 +21,7 @@
     "zxing-wasm": "2.2.4"
   },
   "devDependencies": {
-    "@tsconfig/node22": "22.0.5",
+    "@tsconfig/node24": "24.0.0",
     "@types/node": "24.9.1",
     "@vitejs/plugin-vue": "6.0.4",
     "@vue/tsconfig": "0.8.1",
