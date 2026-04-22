@@ -18,7 +18,7 @@
     "@zxing/browser": "0.1.5",
     "pdfjs-dist": "5.6.205",
     "vue": "3.5.33",
-    "zxing-wasm": "2.2.4"
+    "zxing-wasm": "3.0.2"
   },
   "devDependencies": {
     "@tsconfig/node22": "22.0.5",
