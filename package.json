@@ -15,7 +15,7 @@
     "type-check": "vue-tsc --build"
   },
   "dependencies": {
-    "@zxing/browser": "0.1.5",
+    "@zxing/browser": "0.2.0",
     "pdfjs-dist": "5.6.205",
     "vue": "3.5.33",
     "zxing-wasm": "2.2.4"
